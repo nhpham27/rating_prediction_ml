@@ -3,11 +3,8 @@ from urllib.request import urlopen
 from bs4 import BeautifulSoup as bs
 import socket
 from selenium import webdriver
-from textblob import TextBlob
 import time
 import math
-from spacy_langdetect import LanguageDetector
-import spacy
 
 
 page_load_delay = 15
@@ -37,7 +34,7 @@ for url in links:
     # get the button element for openning the reviews page, and click it automatically
     review_btn = driver.find_element_by_css_selector('button.uitk-link.uitk-spacing.uitk-spacing-padding-blockstart-two.uitk-link-layout-inline.uitk-type-300')
     review_btn.click()
-    
+
     # calculate the number of pages that contain the reviews
     num_page = math.floor(int(review_btn.text.split()[0].replace(',', ''))/10)
     print("Number of review pages: " + str(num_page))
