@@ -1,0 +1,6 @@
+8/19/2021:
+1. Collected data from Expedia about reviews of customers of the restaurants using web scraping
+2. Cleaned the data: 
+    + Eliminated data rows with empty data field
+    + Eliminated data rows that contains languagues other than English (using langid, langdetect)
+    + Eliminated and relaced the characters in rows that affects the dataset
