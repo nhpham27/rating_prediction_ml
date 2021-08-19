@@ -24,7 +24,7 @@ with open(fname, 'r', encoding="utf-8") as in_file, open("cleaned_data.csv", 'w'
     # write field names to output file
     csv_writer.writerow(fields)
 
-    # add all rows to array
+    # add all rows to the array
     for row in csv_reader:
         rows.append(row)
 
