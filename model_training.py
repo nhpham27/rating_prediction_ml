@@ -1,3 +1,5 @@
+# reference: https://www.kaggle.com/avnika22/imdb-perform-sentiment-analysis-with-scikit-learn
+
 import numpy as np
 import csv
 import pandas as pd
@@ -5,53 +7,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns 
 from sklearn.feature_extraction.text import CountVectorizer
 import joblib
-
-
-# with open('data/completed_data.csv', encoding='utf-8') as infile:
-#     # initialize csv reader
-#     csv_reader = csv.reader(infile)
-    
-#     # read the first line
-#     titles = next(csv_reader)
-
-#     rows = []
-#     # put the rows in the array
-#     for row in csv_reader:
-#         rows.append(row)
-
-#     # put all the reviews in one array
-#     reviews = []
-#     ratings = []
-#     for row in rows:
-#         reviews.append(row[0])
-#         ratings.append(int(row[2]))
-    
-#     temp = []
-#     for rating in ratings:
-#         if rating > 3:
-#             temp.append(1)
-#         elif rating < 3:
-#             temp.append(0)
-#         else:
-#             temp.append(rating)
-#     ratings = temp
-#     tmp_ratings = []
-#     tmp_reviews = []
-#     for i in range(0, len(ratings) - 1):
-#         if ratings[i] != 3:
-#             tmp_ratings.append(ratings[i])
-#             tmp_reviews.append(reviews[i])
-
-#     ratings = tmp_ratings
-#     reviews = tmp_reviews
-
-#     with open("data.csv", "w", encoding="utf-8", newline="") as outfile:
-#         csv_writer = csv.writer(outfile)
-
-#         csv_writer.writerow(["review", "label"])
-
-#         for i in range(0, len(ratings) - 1):
-#             csv_writer.writerow([reviews[i], ratings[i]])
 
 # read the data
 count=CountVectorizer()
